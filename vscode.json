@@ -1,0 +1,299 @@
+{
+
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+  "java.server.launchMode": "Standard",
+
+  "javascript.suggest.autoImports": true,
+
+  "terminal.integrated.localEchoLatencyThreshold": 0,
+
+  "typescript.suggest.autoImports": true,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "emmet.includeLanguages": {
+
+    "javascript": "javascriptreact"
+
+  },
+
+  "workbench.colorCustomizations": {
+
+    "editorLineNumber.foreground": "#363d45",
+
+    "activityBar.activeBorder": "#f3f3f3",
+
+    "tab.activeBorder": "#007777"
+
+  },
+
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  "editor.mouseWheelZoom": true,
+
+  "code-runner.runInTerminal": true,
+
+  "git.autofetch": true,
+
+  "workbench.statusBar.visible": true,
+
+  "workbench.activityBar.visible": true,
+
+  "workbench.editor.enablePreview": false,
+
+  "window.zoomLevel": 0,
+
+  "[html]": {
+
+    "editor.defaultFormatter": "HookyQR.beautify"
+
+  },
+
+  "[css]": {
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  },
+  "explorer.sortOrder": "type",
+
+  "editor.cursor_smooth_caret_animation": true,
+
+  "editor.letterSpacing": 0.5,
+
+  "workbench.editor.tabSizing": "shrink",
+
+  "html.format.enable": true,
+
+  "html.format.preserveNewLines": true,
+
+  "files.trimFinalNewlines": true,
+
+  "editor.formatOnPaste": true,
+
+  "editor.formatOnSave": true,
+
+  "files.autoSaveDelay": 600,
+
+  "[javascript]": {
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  },
+
+  "editor.defaultFormatter": "HookyQR.beautify",
+
+  "workbench.editor.scrollToSwitchTabs": true,
+
+  "[python]": {
+
+    "editor.defaultFormatter": "ms-python.python"
+
+  },
+
+  "liveServer.settings.donotVerifyTags": true,
+
+  "editor.suggestSelection": "first",
+
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  "python.languageServer": "Microsoft",
+
+  "[javascriptreact]": {
+
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+
+  },
+
+  "html-css-class-completion.enableEmmetSupport": true,
+
+  "editor.fontSize": 16,
+
+  "breadcrumbs.enabled": false,
+
+  "editor.semanticTokenColorCustomizations": null,
+
+  "git.enableSmartCommit": true,
+
+  "prettier.semi": false,
+
+  "editor.codeActionsOnSave": {
+
+    "source.organizeImports": true
+  },
+
+  "explorer.confirmDragAndDrop": false,
+
+  "editor.cursorSmoothCaretAnimation": true,
+
+  "workbench.iconTheme": "material-icon-theme",
+  "http.systemCertificates": false,
+  "explorer.confirmDelete": false,
+  "editor.renameOnType": true,
+  "projectManager.git.baseFolders": [
+    "C:\\projects\\github projects"
+  ],
+  "editor.minimap.enabled": false,
+  "C_Cpp.updateChannel": "Insiders",
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.terminalRoot": "/",
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd /mnt/$dir && gcc $fileName -o $fileNameWithoutExt && /mnt/$dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltdLFwicGx1Z2luc1wiOltdLFwicmVjZW50Q29sb3JzXCI6W1wiMDAwMDAwXCIsXCJGQ0ZDRkNcIixcIjhDOEM4Q1wiXSxcImZvcm1hdFdpZHRoXCI6MCxcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwicGFnZUZvcm1hdFwiOntcInhcIjowLFwieVwiOjAsXCJ3aWR0aFwiOjgyNyxcImhlaWdodFwiOjExNjl9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiMwMDAwMDBcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+  "liveServer.settings.multiRootWorkspaceName": "",
+  "liveServer.settings.port": 3000,
+  "liveServer.settings.CustomBrowser": "firefox",
+  "git.confirmSync": false,
+  "java.home": "C:\\Program Files\\Java\\jdk-14.0.2",
+  "java.help.firstView": "gettingStarted",
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
+
+  "editor.lineNumbers": "on",
+  "editor.fontFamily": "Fira Code,Cascadia Mono PL ExtraLight",
+  "editor.fontLigatures": true,
+  "explorer.autoReveal": false,
+  "editor.renderIndentGuides": false,
+  "editor.hover.enabled": true,
+  "explorer.compactFolders": false,
+  "editor.cursorStyle": "line",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.colorDecorators": false,
+  "editor.tabCompletion": "on",
+  "editor.glyphMargin": false,
+  "editor.showFoldingControls": "mouseover",
+  "editor.find.seedSearchStringFromSelection": true,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 10,
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "workbench.sideBar.location": "right",
+  "extensions.ignoreRecommendations": false,
+  "editor.wordBasedSuggestions": false,
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.next": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/dist": true
+  },
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.renderControlCharacters": false,
+  "terminal.integrated.rendererType": "dom",
+  "eslint.alwaysShowStatus": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "terminal.integrated.fontFamily": "FiraMono Nerd Font",
+  "terminal.integrated.shell.linux": "/usr/bin/zsh",
+  "editor.tabSize": 2,
+  "liveshare.featureSet": "stable",
+  "editor.snippetSuggestions": "top",
+  "editor.quickSuggestionsDelay": 0,
+  "editor.renderWhitespace": "all",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.wordWrap": "on",
+  "debug.toolBarLocation": "docked",
+  "window.restoreFullscreen": true,
+  "grunt.autoDetect": "off",
+  "gulp.autoDetect": "off",
+  "terminal.integrated.fontSize": 16,
+  "C_Cpp.configurationWarnings": "Disabled",
+  "C_Cpp.default.compilerPath": "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe",
+  "window.newWindowDimensions": "fullscreen",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorWidth": 5,
+  "C_Cpp.default.intelliSenseMode": "gcc-x86",
+  "code-runner.executorMapByFileExtension": {
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript //Nologo",
+    ".scala": "scala",
+    ".jl": "julia",
+    ".cr": "crystal",
+    ".ml": "ocaml",
+    ".exs": "elixir",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".rkt": "racket",
+    ".scm": "csi -script",
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".dart": "dart",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".hs": "runhaskell",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".csproj": "dotnet run --project",
+    ".fsproj": "dotnet run --project",
+    ".lisp": "sbcl --script",
+    ".kit": "kitc --run",
+    ".v": "v run",
+    ".vsh": "v run",
+    ".sass": "sass --style expanded",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  }
+}
