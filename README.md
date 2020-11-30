@@ -4,4 +4,4 @@ These are all the settings and configurations I use for various apps, editors an
 
 I will try to keep them updated.
 
-Enjoy! 😘
+Enjoy!
