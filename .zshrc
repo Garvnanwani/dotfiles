@@ -71,8 +71,3 @@ function dl() {
 function openall() {
   for folder in */; do code $folder && hyper $folder; done
 }
-
-
-PR_TITLEBAR=''
-set-window-title
-add-zsh-hook precmd set-window-title
