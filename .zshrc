@@ -1,73 +1,168 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="cobalt2"
-# ZSH_THEME="cobalt2-minimal"
-#alias ll="ls -l"
-alias db="cd ~/Dropbox/"
-alias zs="source ~/.zshrc"
-alias gum="git pull upstream master"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Changed your .gitignore _after_ you have added / committed some files?
-# run `gri` to untrack anything in your updated .gitignore
-# Put this in your .zshrc file
-alias gri="git ls-files --ignored --exclude-standard | xargs -0 git rm -r"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Path to your oh-my-zsh installation.
+export ZSH="/home/garv/.oh-my-zsh"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
-# Open all merge conflicts or currently changed files in VS Code
-# Switch out `code` for `subl`, `vim`, `atom` or your editor's CLI
-alias fix="git diff --name-only | uniq | xargs code"
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# alias 🖕😏🖕="git push --force"
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-alias "git latest"="git for-each-ref --sort=-committerdate refs/heads/"
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-# I don't think I use this anymore https://github.com/pindexis/qfc
-# [[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-#  Uses tree - install first:
-# brew install tree
-function t() {
-  # Defaults to 3 levels deep, do more with `t 5` or `t 1`
-  # pass additional args after
-  tree -I '.git|node_modules|bower_components|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -aC $2
-}
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
-# Take a screenshot every n seconds
-# Fun for making timelapse gifs later
-# run `creep 20` for every 20 seconds
-function creep() {
-    while :; do; echo "📸" $(date +%H:%M:%S); screencapture -x ~/Screenshots/wes/$(date +%s).png; sleep $1; done
-}
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-# red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cloudapp node npm wd brew osx extract z zsh-syntax-highlighting zsh-autosuggestions dirnav)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting nvm bundler osx rake yarn npm git-auto-fetch github node bower brew extract  docker)
 
 source $ZSH/oh-my-zsh.sh
+export VISUAL=vim
+export EDITOR="$VISUAL"
+# User configuration
+#.# Better Git Logs.
+### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
 
-
-function zource(){
-  source ~/.zshrc && -
+# Git Commit, Add all and Push — in one step.
+function gcap() {
+    git add . && git commit -m "$*" && git push
 }
 
-
-# Old habbits die hard
-alias subl="code"
-
-
-set-window-title() {
-  window_title="\e]0;${${PWD/#"$HOME"/~}/Dropbox\//}\a"
-  echo -ne "$window_title"
+# NEW.
+function gnew() {
+    gcap "📦 NEW: $@"
 }
 
-function dl() {
-  svn checkout ${1:gs/tree\/master/trunk}
+# IMPROVE.
+function gimp() {
+    gcap "👌 IMPROVE: $@"
 }
 
-function openall() {
-  for folder in */; do code $folder && hyper $folder; done
+# FIX.
+function gfix() {
+    gcap "🐛 FIX: $@"
 }
+
+# RELEASE.
+function grlz() {
+    gcap "🚀 RELEASE: $@"
+}
+
+# DOC.
+function gdoc() {
+    gcap "📖 DOC: $@"
+}
+
+# TEST.
+function gtst() {
+    gcap "🤖 TEST: $@"
+}
+
+# BREAKING CHANGE.
+function gbrk() {
+    gcap "‼️ BREAKING: $@"
+}
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+[[ -s /home/garv/.autojump/etc/profile.d/autojump.sh  ]] && source /home/garv/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+alias c="clear"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export LS_COLORS="$(vivid generate jellybeans)"
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+# alias ls='ls -lGH'
+alias open="open_command"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+POWERLEVEL9K_DISABLE_GITSTATUS=true
