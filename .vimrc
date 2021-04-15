@@ -1,5 +1,6 @@
 set nocompatible
-
+set notermguicolors
+set background=dark
 " ---------------------------------------------------------------------------- "
 " Plugins                                                                      "
 " ---------------------------------------------------------------------------- "
@@ -33,6 +34,7 @@ Plug 'jdevlieghere/llvm.vim',               { 'for': 'llvm' }
 Plug 'racer-rust/vim-racer',                { 'for': 'rust' }
 Plug 'lervag/vimtex',                       { 'for': 'tex' }
 Plug 'mattn/emmet-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()
 
@@ -41,7 +43,6 @@ call plug#end()
 " ---------------------------------------------------------------------------- "
 
 filetype plugin indent on
-set background=dark
 
 if has("termguicolors")
     let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -57,6 +58,7 @@ endtry
 if !exists("g:syntax_on")
     syntax enable
 endif
+
 
 set autoread                    " Auto reload file after external command
 set backspace=indent,eol,start  " Delete over line breaks
