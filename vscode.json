@@ -1,6 +1,4 @@
 {
-  "java.server.launchMode": "Standard",
-
   "javascript.suggest.autoImports": true,
 
   "terminal.integrated.localEchoLatencyThreshold": 0,
@@ -16,6 +14,10 @@
   },
 
   "workbench.colorCustomizations": {
+    "activityBar.inactiveForeground": "#8990a099",
+    "activityBar.foreground": "#b3b9c5cc",
+    "foreground": "#d8dce6",
+    "icon.foreground": "#d8dce6",
     "editorLineNumber.foreground": "#363d45",
     "activityBar.activeBorder": "#f3f3f3",
     "tab.activeBorder": "#007777",
@@ -42,17 +44,13 @@
 
   "liveServer.settings.donotShowInfoMsg": true,
 
-  "liveServer.settings.CustomBrowser": "chrome",
-
   "editor.mouseWheelZoom": true,
 
-  "code-runner.runInTerminal": true,
+  "editor.occurrencesHighlight": false,
 
   "git.autofetch": true,
 
   "workbench.statusBar.visible": true,
-
-  "workbench.activityBar.visible": true,
 
   "workbench.editor.enablePreview": false,
 
@@ -80,13 +78,31 @@
 
   "editor.formatOnSave": true,
 
-  "files.autoSaveDelay": 600,
-
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
 
-  "editor.defaultFormatter": "HookyQR.beautify",
+  "go.testOnSave": true,
+
+  "go.lintOnSave": "file",
+
+  "go.formatTool": "goimports",
+
+  "go.testFlags": ["-v"],
+
+  "go.autocompleteUnimportedPackages": true,
+
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+
+    "editor.insertSpaces": false,
+
+    "editor.formatOnSave": true,
+
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
 
   "workbench.editor.scrollToSwitchTabs": true,
 
@@ -98,15 +114,13 @@
 
   "editor.suggestSelection": "first",
 
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   "python.languageServer": "Pylance",
 
   "[javascriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-
-  "html-css-class-completion.enableEmmetSupport": true,
 
   "editor.fontSize": 16,
 
@@ -125,77 +139,19 @@
   "explorer.confirmDelete": false,
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.terminalRoot": "/mnt/",
-  "code-runner.executorMap": {
-    "javascript": "node",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "php": "php",
-    "python": "python3 -u",
-    "perl": "perl",
-    "perl6": "perl6",
-    "ruby": "ruby",
-    "go": "go run",
-    "lua": "lua",
-    "groovy": "groovy",
-    "powershell": "powershell -ExecutionPolicy ByPass -File",
-    "bat": "cmd /c",
-    "shellscript": "bash",
-    "fsharp": "fsi",
-    "csharp": "scriptcs",
-    "vbscript": "cscript //Nologo",
-    "typescript": "ts-node",
-    "coffeescript": "coffee",
-    "scala": "scala",
-    "swift": "swift",
-    "julia": "julia",
-    "crystal": "crystal",
-    "ocaml": "ocaml",
-    "r": "Rscript",
-    "applescript": "osascript",
-    "clojure": "lein exec",
-    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-    "racket": "racket",
-    "scheme": "csi -script",
-    "ahk": "autohotkey",
-    "autoit": "autoit3",
-    "dart": "dart",
-    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-    "haskell": "runhaskell",
-    "nim": "nim compile --verbosity:0 --hints:off --run",
-    "lisp": "sbcl --script",
-    "kit": "kitc --run",
-    "v": "v run",
-    "sass": "sass --style expanded",
-    "scss": "scss --style expanded",
-    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
-  },
-  "liveServer.settings.multiRootWorkspaceName": "",
-  "liveServer.settings.port": 3000,
   "git.confirmSync": false,
-  "java.home": "C:\\Program Files\\Java\\jdk-14.0.2",
-  "java.help.firstView": "gettingStarted",
-  "java.configuration.checkProjectSettingsExclusions": false,
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Night Owl (No Italics)",
 
   "editor.lineNumbers": "on",
-  "editor.fontFamily": "MesloLGS NF, MonoLisa, Fira Code,Cascadia Mono PL ExtraLight",
+  "editor.fontFamily": "MonoLisa,MesloLGS NF,Fira Code,Cascadia Mono PL ExtraLight",
   "editor.fontLigatures": true,
   "explorer.autoReveal": false,
   "editor.renderIndentGuides": false,
   "editor.hover.enabled": true,
   "explorer.compactFolders": false,
-  "editor.cursorStyle": "line",
   "editor.semanticHighlighting.enabled": true,
   "editor.tabCompletion": "on",
-  "editor.glyphMargin": false,
+  "editor.acceptSuggestionOnEnter": "off",
   "editor.showFoldingControls": "mouseover",
   "editor.find.seedSearchStringFromSelection": true,
   "workbench.editor.limit.enabled": true,
@@ -203,7 +159,6 @@
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "workbench.sideBar.location": "right",
   "extensions.ignoreRecommendations": false,
   "editor.wordBasedSuggestions": false,
   "files.exclude": {
@@ -216,67 +171,25 @@
     "**/CVS": true,
     "**/dist": true
   },
-  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  // "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "editor.renderControlCharacters": false,
   "terminal.integrated.rendererType": "dom",
   "eslint.alwaysShowStatus": true,
-  "editor.tabSize": 2,
-  "liveshare.featureSet": "stable",
-  "editor.snippetSuggestions": "top",
   "editor.quickSuggestionsDelay": 0,
   "editor.renderWhitespace": "all",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.wordWrap": "on",
-  "debug.toolBarLocation": "docked",
+  // "debug.toolBarLocation": "docked",
   "window.restoreFullscreen": true,
   "grunt.autoDetect": "off",
   "gulp.autoDetect": "off",
-  "C_Cpp.configurationWarnings": "Disabled",
-  "C_Cpp.default.compilerPath": "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe",
   "workbench.startupEditor": "newUntitledFile",
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorWidth": 5,
-  "C_Cpp.default.intelliSenseMode": "gcc-x86",
-  "code-runner.executorMapByFileExtension": {
-    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
-    ".vbs": "cscript //Nologo",
-    ".scala": "scala",
-    ".jl": "julia",
-    ".cr": "crystal",
-    ".ml": "ocaml",
-    ".exs": "elixir",
-    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-    ".rkt": "racket",
-    ".scm": "csi -script",
-    ".ahk": "autohotkey",
-    ".au3": "autoit3",
-    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
-    ".kts": "kotlinc -script",
-    ".dart": "dart",
-    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-    ".hs": "runhaskell",
-    ".nim": "nim compile --verbosity:0 --hints:off --run",
-    ".csproj": "dotnet run --project",
-    ".fsproj": "dotnet run --project",
-    ".lisp": "sbcl --script",
-    ".kit": "kitc --run",
-    ".v": "v run",
-    ".vsh": "v run",
-    ".sass": "sass --style expanded",
-    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-  },
-  "workbench.editorAssociations": [],
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": true,
   "editor.suggest.localityBonus": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.folding": false,
-  "files.associations": {
-    "*.md": "mdx"
-  },
-  "javascript.validate.enable": false,
+  // "editor.folding": false,
+  // "javascript.validate.enable": false,
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
@@ -287,59 +200,100 @@
     "**/.gh-pages": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false,
+    // "source.fixAll.eslint": false,
     "source.organizeImports": true
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "eslint.options": {
-    "env": {
-      "browser": true,
-      "jest/globals": true,
-      "es6": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2019,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "rules": {
-      "no-debugger": "off"
-    }
-  },
+  // "eslint.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   "typescript",
+  //   "typescriptreact"
+  // ],
+  // "eslint.options": {
+  //   "env": {
+  //     "browser": true,
+  //     "jest/globals": true,
+  //     "es6": true
+  //   },
+  //   "parserOptions": {
+  //     "ecmaVersion": 2019,
+  //     "sourceType": "module",
+  //     "ecmaFeatures": {
+  //       "jsx": true
+  //     }
+  //   },
+  //   "rules": {
+  //     "no-debugger": "off"
+  //   }
+  // },
   "explorer.openEditors.visible": 0,
-  "workbench.editor.limit.perEditorGroup": false,
-  "debug.javascript.codelens.npmScripts": "never",
+  // "workbench.editor.limit.perEditorGroup": false,
+  // "debug.javascript.codelens.npmScripts": "never",
   "npm.runSilent": true,
   "editor.smoothScrolling": true,
-  "php.suggest.basic": false,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.packageManager": "npm",
-  "npm.packageManager": "npm",
-  "prettier.bracketSpacing": false,
+  // "eslint.packageManager": "npm",
+  // "npm.packageManager": "npm",
+  // "prettier.bracketSpacing": false,
   "prettier.proseWrap": "always",
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
-  "prettier.useEditorConfig": false,
-  "editor.acceptSuggestionOnEnter": "off",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": []
-  },
-  "terminal.integrated.cursorWidth": 1.2,
-  "window.titleBarStyle": "custom",
   "python.pythonPath": "/usr/bin/python3",
+  // "python.analysis.diagnosticSeverityOverrides": {
+  //   "reportMissingImports": "none"
+  // },
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontSize": 16.5,
   "terminal.integrated.letterSpacing": 0.1,
   "terminal.external.linuxExec": "GNOME Terminal",
-  "terminal.integrated.shell.linux": "/usr/bin/zsh"
+  "terminal.integrated.shell.linux": "/usr/bin/zsh",
+  "auto-rename-tag.activationOnLanguage": ["*"],
+  "window.titleBarStyle": "custom",
+  "window.title": " ",
+  // "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "Sorcerer",
+  "css.lint.duplicateProperties": "warning",
+  "go.toolsManagement.autoUpdate": true,
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.showBreakpointsInOverviewRuler": true,
+  "debug.javascript.usePreview": false,
+  "projectManager.git.baseFolders": ["/home/garv/Projects"],
+  "projectManager.any.baseFolders": ["/home/garv/Projects"],
+  "projectManager.any.maxDepthRecursion": 2,
+  "projectManager.any.ignoredFolders": [
+    "node_modules",
+    "out",
+    "typings",
+    "test",
+    ".git",
+    ".expo",
+    ".vscode",
+    ".github",
+    ".expo-shared"
+  ],
+  "eslint.validate": [
+    "mdx",
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue"
+  ],
+  "errorLens.excludePatterns": [
+    "File is a CommonJS module"
+  ],
+  "prettier.requireConfig": true,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "editor.cursorBlinking": "phase",
+  "ActiveFileInStatusBar.fullpath": false
 }
