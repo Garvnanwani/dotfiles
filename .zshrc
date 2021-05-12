@@ -130,6 +130,9 @@ plugins=(zsh-autosuggestions git docker docker-compose zsh-syntax-highlighting n
 
 # more plugins -> dnf, brew, nvm
 
+# tab completion
+autoload -U compinit
+compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,6 +146,7 @@ fi
 alias c="clear"
 alias open="open_command"
 alias sau="sudo apt update"
+alias sac="sudo apt clean && sudo apt autoclean && sudo apt autoremove"
 alias ai="tuxi"
 alias ..l="cd ../ && ll";
 alias pg="echo 'Pinging Google' && ping www.google.com";
@@ -183,7 +187,6 @@ alias yav="yarn run validate";
 alias yoff="yarn add --offline";
 alias ypm="echo \"Installing deps without lockfile and ignoring engines\" && yarn install --no-lockfile --ignore-engines"
 
-
 mg () { mkdir "$@" && cd "$@" || exit; }
 cdl() { cd "$@" && ll; }
 npm-latest() { npm info "$1" | grep latest; }
@@ -197,6 +200,11 @@ gif() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #.# Better Git Logs.
+
+# Git Commit, Add all — in one step.
+function gcam() {
+    git add . && git commit -m "$*"
+}
 
 # Git Commit, Add all and Push — in one step.
 function gcap() {
